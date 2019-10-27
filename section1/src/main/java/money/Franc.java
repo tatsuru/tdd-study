@@ -1,12 +1,12 @@
 package money;
 
 class Franc extends Money {
-    Franc(int amount) {
+    Franc(int amount, String currency) {
         this.amount = amount;
-        currency = "CHF";
+        this.currency = currency;
     }
 
     Money times(int multipler) {
-        return new Franc(amount * multipler);
+        return Money.franc(amount * multipler);
     }
 }
